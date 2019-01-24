@@ -1,0 +1,455 @@
+{
+  "result": {
+    "allPermissions": {
+      "items": [
+        {
+          "name": "Pages",
+          "displayName": "[Pages]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Users",
+          "displayName": "[Pages.Users]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Roles",
+          "displayName": "[Pages.Roles]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Tenants",
+          "displayName": "[Pages.Tenants]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Staff",
+          "displayName": "[Pages.Staff]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Staff.Merchandiser",
+          "displayName": "[Pages.Staff.Merchandiser]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Staff.Customer_service",
+          "displayName": "[Pages.Staff.Customer_service]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Staff.Financial",
+          "displayName": "[Pages.Staff.Financial]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Staff.Owner",
+          "displayName": "[Pages.Staff.Owner]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Staff.Others",
+          "displayName": "[Pages.Staff.Others]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Inspection",
+          "displayName": "[Pages.Inspection]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Admin",
+          "displayName": "[Pages.Admin]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Admin.Users",
+          "displayName": "[Pages.Admin.Users]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Admin.Roles",
+          "displayName": "[Pages.Admin.Roles]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.RQAssitant",
+          "displayName": "[Pages.RQAssitant]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.RQAssitant.Users",
+          "displayName": "[Pages.RQAssitant.Users]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.RQAssitant.Roles",
+          "displayName": "[Pages.RQAssitant.Roles]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Pages.Tasks",
+          "displayName": "[Pages.Pages.Tasks]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Pages.Tasks.AssignPerson",
+          "displayName": "[Pages.Pages.Tasks.Assign person]",
+          "description": null,
+          "id": 0
+        },
+        {
+          "name": "Pages.Pages.Tasks.Delete",
+          "displayName": "[Pages.Pages.Tasks.Delete]",
+          "description": null,
+          "id": 0
+        }
+      ]
+    },
+    "allRoles": [
+      {
+        "name": "RQAdmin",
+        "displayName": "管理员",
+        "isStatic": true,
+        "isDefault": false,
+        "creationTime": "2018-12-19T14:31:26.138123",
+        "id": 3
+      },
+      {
+        "name": "RQAdminPermissions",
+        "displayName": "管理员可配置权限",
+        "isStatic": true,
+        "isDefault": false,
+        "creationTime": "2018-12-19T14:34:37.53692",
+        "id": 4
+      },
+      {
+        "name": "Merchandiser",
+        "displayName": "业务员",
+        "isStatic": true,
+        "isDefault": false,
+        "creationTime": "2018-12-19T14:36:00.483323",
+        "id": 11
+      },
+      {
+        "name": "Financial",
+        "displayName": "财务",
+        "isStatic": true,
+        "isDefault": false,
+        "creationTime": "2018-12-19T14:36:07.877524",
+        "id": 12
+      },
+      {
+        "name": "Customer_service",
+        "displayName": "客服",
+        "isStatic": true,
+        "isDefault": false,
+        "creationTime": "2018-12-19T14:36:22.603791",
+        "id": 13
+      },
+      {
+        "name": "string",
+        "displayName": "string",
+        "isStatic": true,
+        "isDefault": false,
+        "creationTime": "2018-12-24T11:01:11.406572",
+        "id": 14
+      },
+      {
+        "name": "Admin",
+        "displayName": "Admin",
+        "isStatic": true,
+        "isDefault": true,
+        "creationTime": "2018-12-24T11:09:32.719349",
+        "id": 15
+      },
+      {
+        "name": "RQAssitantPermissions",
+        "displayName": "助理可配置权限",
+        "isStatic": true,
+        "isDefault": false,
+        "creationTime": "2018-12-24T11:10:33.984433",
+        "id": 16
+      },
+      {
+        "name": "RQAssitant",
+        "displayName": "管理员助理",
+        "isStatic": true,
+        "isDefault": false,
+        "creationTime": "2018-12-24T11:22:41.300525",
+        "id": 17
+      },
+      {
+        "name": "addd3333",
+        "displayName": "adad1222",
+        "isStatic": true,
+        "isDefault": false,
+        "creationTime": "2019-01-07T14:55:31.941375",
+        "id": 18
+      },
+      {
+        "name": "addd4444",
+        "displayName": "ada3333",
+        "isStatic": true,
+        "isDefault": false,
+        "creationTime": "2019-01-07T15:09:56.929953",
+        "id": 19
+      }
+    ],
+    "AuthenticateResultModel": {
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjExIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6ImFkbWluNiIsIkFzcE5ldC5JZGVudGl0eS5TZWN1cml0eVN0YW1wIjoiQTVTM0tNVUhHVVNYMkdOVVpET0o0VTU1UVQyMkMyMlgiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiUlFBZG1pbiIsIkFkbWluIiwiUlFBc3NpdGFudCJdLCJzdWIiOiIxMSIsImp0aSI6IjU4YWU3ZjNkLTYyM2YtNDNmMS1iZWVkLTBlMTk4NzIzNjQ4OCIsImlhdCI6MTU0NzAyNzM3NiwibmJmIjoxNTQ3MDI3Mzc2LCJleHAiOjE1NDcxMTM3NzYsImlzcyI6IlJRQ29yZSIsImF1ZCI6IlJRQ29yZSJ9.w921zwaKwGDkFnORZvLuJNh_9CcsET5mhmQwsStbD80",
+      "encryptedAccessToken": "wNYmO41/48SHNstaLVXxHCCre29BZQl1NhC6NM3R3rzpXtPQxVzH6jEzA/QhXFN5tu6Fk7pO53uppm1mVXMZgxbyRVz26dnepi/FyB6axBY+6gq1GL+uRQgoiFUCjRN2p8w6LevViwKlHyWZZJZO1DGVSjAi1m2U+og9pkHw9/QFuTaddXoEc2aWHqYeqH6iCwpNxbsGH0q3Edfasw2jwuz1FDjpXGgGZjFKe9VFagwOaJgUAzM/NKslIhgJ4CuRm//r2X+egBTLD9RSXBv/bKRhHK9lPlgPfvmbnwmb9+5+iL8kOCWHMkr3/lH5f2eoSmYqi/XdztQR80Di2gWfbQ5hvSk0apGshvUvM9pVVdXKzHfPKp6g4j8bqSWuRNYqei489JRj8LsJSuyFDNfBL8wcwG4hHOtaenLBAZv0kdmi7WzS9NxS0+wfS5KXu99TdbUtVPM85zI9QzdDpWz0PdZOuKqWJBlQ6/e7vzH+P4ly2wH5rZJsshwsfmJfuF0GB3BB6sz/MvJeCGBDj834mQioYw0JqM88uNdNfxVE/pZHSceNXi1U7xcvHXXaTUwSocbdKIC9/SkeRLcSNd5eNH5v0uxJbZaQf8cORfUl2fzaK4JLhGvw9+pHwxA++4fk58Oe6bHqkK4ToRUVM8o/whOa1hVWjC4M436b7z+anzFEcAggS9gjnjWwff08ztoeh2ypjsLdyvh6DV+yn1g2n87NwDgyyQ9+7dgubwXqwn/HTvtKtIs62w9G2Gh6xiksh35HgYgWqfWRHh0p4bIabReipBT3QvcQep0K14bR+ZlRgG2xoKcPxEnb0p/zTEUJ6QzpkU3FGaDC6scLQ8+GK1rg+zNsp4U1esxqDnQsPHq+H8mc83bqiapIgNvQtakmIKOwUtxQqe0uIcQh26CG1g==",
+      "expireInSeconds": 86400,
+      "userId": 11
+    },
+    "canAssignInspectionToOther": "拥有Pages_Inspection",
+    "canAssignInspectionToOtherValue": true,
+    "PermissionscanAssigned": [
+      {
+        "name": "Pages",
+        "displayName": "[Pages]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Users",
+        "displayName": "[Pages.Users]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Roles",
+        "displayName": "[Pages.Roles]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Tenants",
+        "displayName": "[Pages.Tenants]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Staff",
+        "displayName": "[Pages.Staff]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Staff.Merchandiser",
+        "displayName": "[Pages.Staff.Merchandiser]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Staff.Customer_service",
+        "displayName": "[Pages.Staff.Customer_service]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Staff.Financial",
+        "displayName": "[Pages.Staff.Financial]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Staff.Owner",
+        "displayName": "[Pages.Staff.Owner]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Staff.Others",
+        "displayName": "[Pages.Staff.Others]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Inspection",
+        "displayName": "[Pages.Inspection]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Admin",
+        "displayName": "[Pages.Admin]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Admin.Users",
+        "displayName": "[Pages.Admin.Users]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Admin.Roles",
+        "displayName": "[Pages.Admin.Roles]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.RQAssitant",
+        "displayName": "[Pages.RQAssitant]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.RQAssitant.Users",
+        "displayName": "[Pages.RQAssitant.Users]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.RQAssitant.Roles",
+        "displayName": "[Pages.RQAssitant.Roles]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Pages.Tasks",
+        "displayName": "[Pages.Pages.Tasks]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Pages.Tasks.AssignPerson",
+        "displayName": "[Pages.Pages.Tasks.Assign person]",
+        "description": null,
+        "id": 0
+      },
+      {
+        "name": "Pages.Pages.Tasks.Delete",
+        "displayName": "[Pages.Pages.Tasks.Delete]",
+        "description": null,
+        "id": 0
+      }
+    ],
+    "permissionsToRolesVersion": 1001,
+    "RolescanAssigned": [
+      {
+        "name": "RQAdmin",
+        "displayName": "管理员",
+        "normalizedName": "RQADMIN",
+        "description": "瑞庆管理员",
+        "isStatic": true,
+        "permissions": [],
+        "id": 3
+      },
+      {
+        "name": "RQAdminPermissions",
+        "displayName": "管理员可配置权限",
+        "normalizedName": "RQADMINPERMISSIONS",
+        "description": "管理员可配置权限",
+        "isStatic": true,
+        "permissions": [],
+        "id": 4
+      },
+      {
+        "name": "Merchandiser",
+        "displayName": "业务员",
+        "normalizedName": "MERCHANDISER",
+        "description": "业务员",
+        "isStatic": true,
+        "permissions": [],
+        "id": 11
+      },
+      {
+        "name": "Financial",
+        "displayName": "财务",
+        "normalizedName": "FINANCIAL",
+        "description": "财务",
+        "isStatic": true,
+        "permissions": [],
+        "id": 12
+      },
+      {
+        "name": "Customer_service",
+        "displayName": "客服",
+        "normalizedName": "CUSTOMER_SERVICE",
+        "description": "客服人员",
+        "isStatic": true,
+        "permissions": [],
+        "id": 13
+      },
+      {
+        "name": "string",
+        "displayName": "string",
+        "normalizedName": "STRING",
+        "description": "string",
+        "isStatic": true,
+        "permissions": [],
+        "id": 14
+      },
+      {
+        "name": "Admin",
+        "displayName": "Admin",
+        "normalizedName": "ADMIN",
+        "description": null,
+        "isStatic": true,
+        "permissions": [],
+        "id": 15
+      },
+      {
+        "name": "RQAssitantPermissions",
+        "displayName": "助理可配置权限",
+        "normalizedName": "RQASSITANTPERMISSIONS",
+        "description": "助理可配置权限",
+        "isStatic": true,
+        "permissions": [],
+        "id": 16
+      },
+      {
+        "name": "RQAssitant",
+        "displayName": "管理员助理",
+        "normalizedName": "RQASSITANT",
+        "description": "管理员助理",
+        "isStatic": true,
+        "permissions": [],
+        "id": 17
+      },
+      {
+        "name": "addd3333",
+        "displayName": "adad1222",
+        "normalizedName": "ADDD3333",
+        "description": "string",
+        "isStatic": true,
+        "permissions": [],
+        "id": 18
+      },
+      {
+        "name": "addd4444",
+        "displayName": "ada3333",
+        "normalizedName": "ADDD4444",
+        "description": "string",
+        "isStatic": true,
+        "permissions": [],
+        "id": 19
+      }
+    ]
+  },
+  "targetUrl": null,
+  "success": true,
+  "error": null,
+  "unAuthorizedRequest": false,
+  "__abp": true
+}
