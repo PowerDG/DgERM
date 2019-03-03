@@ -6,7 +6,7 @@ using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RQCore.RQEnitity
+namespace DgCore.DgEnitity
 {
     public class Invoice : Entity<int>, IFullAudited
     {

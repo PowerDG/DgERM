@@ -13,10 +13,10 @@ using Abp.Extensions;
 using Abp.UI;
 using Abp.Domain.Repositories;
 using Abp.Domain.Services;
-using RQCore.RQEnitity;
+using DgCore.DgEnitity;
 using Abp.Domain.Uow;
 
-namespace RQCore.RQEnitity
+namespace DgCore.DgEnitity
 {
     public class BillInfoManager : DomainService
     {

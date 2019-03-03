@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 
-namespace RQCore.RQEnitity
+namespace DgCore.DgEnitity
 {
     public class LogisticsInfo :Entity<int>,ICreationAudited
     {

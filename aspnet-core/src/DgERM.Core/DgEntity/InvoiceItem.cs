@@ -5,7 +5,7 @@ using System.Text;
 using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace RQCore.RQEnitity
+namespace DgCore.DgEnitity
 {
     //[AutoMap(typeof(inv))]
     public class InvoiceItem : Entity<int>//, IFullAudited

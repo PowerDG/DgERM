@@ -13,10 +13,10 @@ using Abp.Extensions;
 using Abp.UI;
 using Abp.Domain.Repositories;
 using Abp.Domain.Services;
-using RQCore.RQEnitity;
+using DgCore.DgEnitity;
 
 
-namespace RQCore.RQEnitity
+namespace DgCore.DgEnitity
 {
     public class DgDictionaryManager : DomainService
     {

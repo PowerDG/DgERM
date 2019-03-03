@@ -6,7 +6,7 @@ using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
 
 
-namespace RQCore.RQEnitity
+namespace DgCore.DgEnitity
 {
 
 

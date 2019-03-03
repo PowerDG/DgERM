@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RQCore.RQEnitity
+namespace DgCore.DgEnitity
 {
     /// <summary>
     /// 动态生产有规律的ID
