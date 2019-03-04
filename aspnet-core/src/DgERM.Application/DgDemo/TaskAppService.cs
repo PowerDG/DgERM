@@ -28,9 +28,12 @@ namespace DgERM.DgDemo
             EventBus.Trigger(this, new TaskCompletedEventData { TaskId = 42 });
             EventBus.Trigger(typeof(TaskCompletedEventData), this, new TaskCompletedEventData { TaskId = 42 });
 
-            
 
 
+            EventBus.Register<TaskCompletedEventData>(eventData =>
+            {
+                WriteActivity("A task is completed by id = " + eventData.TaskId);
+            });
             //“任务完成”事件发生后，这个lambda方法就会被调用。
             //第二个是接受一个实现了IEventHantler<T> 的对象：
             EventBus.Register<TaskCompletedEventData>(new ActivityWriter());
@@ -40,8 +43,35 @@ namespace DgERM.DgDemo
             EventBus.Register<TaskCompletedEventData, ActivityWriter>();
 
 
+            //注册一个事件
+            var registration = EventBus.Register<TaskCompletedEventData>
+                (eventData => WriteActivity("A task is completed by id = " + eventData.TaskId));
+            //取消注册一个事件
+            registration.Dispose();
+
+
+            //当然,取消注册可以在任何地方任何时候进行。
+            //保存(keep)好注册的对象并且在你想要取消注册的时候释放(dispose)掉它。
+            //所有注册方法的重载(overload)都会返回一个可释放(disposable)的对象来取消事件的注册。
+            //------------------------
+
+            //事件总线也提供取消注册方法。使用范例:
+            //创建一个处理器
+            var handler = new ActivityWriter();
+            //注册一个事件
+            EventBus.Register<TaskCompletedEventData>(handler);
+            //取消这个事件的注册
+            EventBus.Unregister<TaskCompletedEventData>(handler);
+
+
+
         }
-         
+
+        private void WriteActivity(string v)
+        {
+            throw new NotImplementedException();
+        }
+
 
         //触发事件的另一个方法是：
         //    使用AggregateRoot类的DomainEvents集合（查看实体文档的相关小节）。
