@@ -9,17 +9,27 @@ namespace DgERM.DgDemo
     public class ActivityWriter :
     IEventHandler<TaskCompletedEventData>,
     IEventHandler<TaskCreatedEventData>,
+
     ITransientDependency
     {
+         
         public void HandleEvent(TaskCompletedEventData eventData)
         {
             //TODO: handle the event...
+            WriteActivity("A task is completed by id = " + eventData.TaskId);
         }
-
+         
         public void HandleEvent(TaskCreatedEventData eventData)
         {
             //TODO: handle the event...
         }
+
+
+        private void WriteActivity(string v)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 
     public class ActivityWriter2 : 

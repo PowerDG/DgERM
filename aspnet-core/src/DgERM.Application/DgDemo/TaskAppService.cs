@@ -21,13 +21,14 @@ namespace DgERM.DgDemo
         //    当你调用它的方法时，方法里什么也不做。
         public void CompleteTask(CompleteTaskInput input)
         {
-            //TODO: complete the task on database...
-            EventBus.Trigger(new TaskCompletedEventData { TaskId = 42 });
-            EventBus.Register<TaskCompletedEventData>(eventData =>
-            {
-                WriteActivity("A task is completed by id = " + eventData.TaskId);
-            });
+        //TODO: complete the task on database...
 
+            //有一些触发方法的重载:
+            EventBus.Trigger(new TaskCompletedEventData { TaskId = 42 });
+            EventBus.Trigger(this, new TaskCompletedEventData { TaskId = 42 });
+            EventBus.Trigger(typeof(TaskCompletedEventData), this, new TaskCompletedEventData { TaskId = 42 });
+
+            
 
 
             //“任务完成”事件发生后，这个lambda方法就会被调用。
@@ -40,11 +41,7 @@ namespace DgERM.DgDemo
 
 
         }
-
-        private void WriteActivity(string v)
-        {
-            throw new NotImplementedException();
-        }
+         
 
         //触发事件的另一个方法是：
         //    使用AggregateRoot类的DomainEvents集合（查看实体文档的相关小节）。
