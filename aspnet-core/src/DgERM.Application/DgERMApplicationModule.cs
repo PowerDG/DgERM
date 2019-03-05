@@ -21,10 +21,18 @@ namespace DgERM
 
             IocManager.RegisterAssemblyByConvention(thisAssembly);
 
-            Configuration.Modules.AbpAutoMapper().Configurators.Add(
-                // Scan the assembly for classes which inherit from AutoMapper.Profile
-                cfg => cfg.AddProfiles(thisAssembly)
-            );
+            Configuration.Modules.AbpAutoMapper().Configurators
+            //    .Add(
+            //    // Scan the assembly for classes which inherit from AutoMapper.Profile
+            //    cfg => cfg.AddProfiles(thisAssembly)
+ 
+            //);
+            .Add(mapper =>
+            {
+                var mappers = IocManager.IocContainer.ResolveAll<IDtoMapping>();
+                foreach (var dtomap in mappers)
+                    dtomap.CreateMapping(mapper);
+            }); 
         }
     }
 }
