@@ -1,7 +1,9 @@
 ﻿using DgERM.Controllers;
+using DgERM.DgCore.Tasks;
 using DgERM.DgDemo.Tasks;
 using DgERM.Users;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +15,16 @@ namespace DgERM.Web.Host.Controllers
     {
         private readonly ITaskAppService _taskAppService;
         private readonly IUserAppService _userAppService;
-
+        public TasksController(ITaskAppService taskAppService, IUserAppService userAppService)
+        {
+            _taskAppService = taskAppService;
+            _userAppService = userAppService;
+        }
         //[ChildActionOnly]
         public PartialViewResult Create()
         {
-            var userList = _userAppService.GetUsers();
-            ViewBag.AssignedPersonId = new SelectList(userList.Items, "Id", "Name");
+            var userList = _userAppService.GetRoles();
+            //ViewBag.AssignedPersonId = new SelectList(userList.Items, "Id", "Name");
             return PartialView("_CreateTask");
         }
 
@@ -26,7 +32,8 @@ namespace DgERM.Web.Host.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(CreateTaskInput task)
         {
-            var id = _taskAppService.CreateTask(task);
+            //var id = _taskAppService.CreateTask(task);
+                //.CreateTask(task);
 
             var input = new GetTasksInput();
             var output = _taskAppService.GetTasks(input);
@@ -34,25 +41,74 @@ namespace DgERM.Web.Host.Controllers
             return PartialView("_List", output.Tasks);
         }
 
-        public TasksController(ITaskAppService taskAppService, IUserAppService userAppService)
-        {
-            _taskAppService = taskAppService;
-            _userAppService = userAppService;
-        }
+        
 
         public PartialViewResult RemoteCreate()
         {
-            var userList = _userAppService.GetUsers();
-            ViewBag.AssignedPersonId = new SelectList(userList.Items, "Id", "Name");
+            var userList = _userAppService.GetRoles();
+            //ViewBag.AssignedPersonId = new SelectList(userList., "Id", "Name");
             return PartialView("_CreateTaskPartial");
         }
 
-        [ChildActionOnly]
-        public PartialViewResult Create()
+       
+    }
+
+
+
+    public class IndexViewModel
+    {
+        /// <summary>
+        /// 用来进行绑定列表过滤状态
+        /// </summary>
+        public TaskState? SelectedTaskState { get; set; }
+
+        /// <summary>
+        /// 列表展示
+        /// </summary>
+        public IReadOnlyList<TaskDto> Tasks { get; }
+
+        /// <summary>
+        /// 创建任务模型
+        /// </summary>
+        public CreateTaskInput CreateTaskInput { get; set; }
+
+        /// <summary>
+        /// 更新任务模型
+        /// </summary>
+        public UpdateTaskInput UpdateTaskInput { get; set; }
+
+        public IndexViewModel(IReadOnlyList<TaskDto> items)
         {
-            var userList = _userAppService.GetUsers();
-            ViewBag.AssignedPersonId = new SelectList(userList.Items, "Id", "Name");
-            return PartialView("_CreateTask");
+            Tasks = items;
+        }
+
+        /// <summary>
+        /// 用于过滤下拉框的绑定
+        /// </summary>
+        /// <returns></returns>
+
+        public List<SelectListItem> GetTaskStateSelectListItems()
+        {
+            var list = new List<SelectListItem>()
+            {
+                new SelectListItem()
+                {
+                    Text = "AllTasks",
+                    Value = "",
+                    Selected = SelectedTaskState==null
+                }
+            };
+
+            list.AddRange(Enum.GetValues(typeof(TaskState))
+                .Cast<TaskState>()
+                .Select(state => new SelectListItem()
+                {
+                    Text = $"TaskState_{state}",
+                    Value = state.ToString(),
+                    Selected = state == SelectedTaskState
+                })
+            );
+            return list;
         }
     }
 }
