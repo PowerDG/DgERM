@@ -1,11 +1,17 @@
-﻿using Abp.AutoMapper;
+﻿using Abp.Application.Services.Dto;
+using Abp.AutoMapper;
 using Abp.Domain.Repositories;
+using Abp.Extensions;
+using Abp.Linq.Extensions;
 using Abp.Timing;
 using AutoMapper;
+using Castle.Core.Internal;
 using DgERM.DgCore.Tasks;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Dynamic.Core;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -119,6 +125,29 @@ namespace DgERM.DgDemo.Tasks
         public IList<TaskDto> GetAllTasks()
         {
             throw new NotImplementedException();
+        }
+
+
+        public PagedResultDto<TaskDto> GetPagedTasks(GetTasksInput input)
+        {
+            //初步过滤
+            var query = _taskRepository.GetAll().Include(t => t.AssignedPerson)
+                .WhereIf(input.State.HasValue, t => t.State == input.State.Value)
+                .WhereIf(!input.Filter.IsNullOrEmpty(), t => t.Title.Contains(input.Filter))
+                .WhereIf(input.AssignedPersonId.HasValue, t => t.AssignedPersonId == input.AssignedPersonId.Value);
+
+            //排序
+            //query = !string.IsNullOrEmpty(input.Sorting) ? query.OrderBy(input.Sorting) : query.OrderByDescending(t => t.CreationTime);
+
+            //获取总数
+            var tasksCount = query.Count();
+            //默认的分页方式
+            //var taskList = query.Skip(input.SkipCount).Take(input.MaxResultCount).ToList();
+
+            //ABP提供了扩展方法PageBy分页方式
+            var taskList = query.ToList();
+
+            return new PagedResultDto<TaskDto>(tasksCount, taskList.MapTo<List<TaskDto>>());
         }
     }
 }
