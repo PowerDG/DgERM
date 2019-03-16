@@ -10,6 +10,6 @@ namespace DgERM.Users
     {
         Task<ListResultDto<RoleDto>> GetRoles();
 
-        Task ChangeLanguage(ChangeUserLanguageDto input);
+        Task ChangeLanguage(ChangeUserLanguageDto input); 
     }
 }
