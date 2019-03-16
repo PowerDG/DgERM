@@ -50,6 +50,10 @@ namespace DgERM.EntityFrameworkCore.Seed.Host
                 .Where(p => p.MultiTenancySides.HasFlag(MultiTenancySides.Host) &&
                             !grantedPermissions.Contains(p.Name))
                 .ToList();
+            //¸³ÓèËùÓĞ¸øAdmin
+            var taskPermissions = PermissionFinder 
+                .GetAllPermissions(new DgERMAuthorizationProvider()).ToList();
+            permissions.AddRange(taskPermissions);
 
             if (permissions.Any())
             {
