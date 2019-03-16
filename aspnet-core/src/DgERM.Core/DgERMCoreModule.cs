@@ -3,6 +3,7 @@ using Abp.Reflection.Extensions;
 using Abp.Timing;
 using Abp.Zero;
 using Abp.Zero.Configuration;
+using DgERM.Authorization;
 using DgERM.Authorization.Roles;
 using DgERM.Authorization.Users;
 using DgERM.Configuration;
@@ -23,6 +24,8 @@ namespace DgERM
             Configuration.Modules.Zero().EntityTypes.Tenant = typeof(Tenant);
             Configuration.Modules.Zero().EntityTypes.Role = typeof(Role);
             Configuration.Modules.Zero().EntityTypes.User = typeof(User);
+
+            //Configuration.Authorization.Providers.Add<DgERMAuthorizationProvider>();
 
             DgERMLocalizationConfigurer.Configure(Configuration.Localization);
 
