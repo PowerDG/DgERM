@@ -10,6 +10,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
+using CoreApi.Model;
+using Microsoft.EntityFrameworkCore;
+
 namespace EF4Api.NewDB
 {
     public class Startup
@@ -24,6 +27,9 @@ namespace EF4Api.NewDB
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            var sqlConnection = Configuration.GetConnectionString("SqlServerConnection");
+            services.AddDbContext<ApiDBContent>(option => option.UseNpgsql(sqlConnection));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
