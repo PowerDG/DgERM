@@ -3,7 +3,7 @@
 namespace Trump.EF
 {
     [Table("SysUser", Schema = "public")]
-    public class SysUser
+    public class SysUser 
     {
         public int Id { get; set; }
         public string UserName { get; set; }
